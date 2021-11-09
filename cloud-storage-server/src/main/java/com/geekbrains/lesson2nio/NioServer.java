@@ -28,7 +28,7 @@ public class NioServer {
             selector = Selector.open();
             serverSocketChannel.register(selector, SelectionKey.OP_ACCEPT);
             log.debug("Server started...");
-            Handler handler = new Handler(serverSocketChannel);
+            //Handler handler = new Handler(serverSocketChannel);
             while (serverSocketChannel.isOpen()){
                 selector.select();
                 Set<SelectionKey> selectionKeys = selector.selectedKeys();
